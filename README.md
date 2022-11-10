@@ -53,7 +53,7 @@ A _Merkle Tree_ is a tree in which every "leaf" (node) is labelled with the cryp
             - After first download: Cache yourself locally
 
 - Token Airdrop
-    - A supply of tokens should be airdrop to a set of addresses
+    - A supply of tokens should be airdroppped to a set of addresses
     - Q: How can I prove that my address of part of the set?
     - A:
         1. Post the _merkle root_ on-chain
@@ -65,7 +65,7 @@ A _Merkle Tree_ is a tree in which every "leaf" (node) is labelled with the cryp
 
 ## Merkle Proof
 
-![Proof](.images/proof.png)
+![Proof](./images/proof.png)
 
 
 ## Lets make an Airdrop
