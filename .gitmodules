@@ -1,0 +1,15 @@
+[submodule "verification-oz/option/lib/forge-std"]
+	path = verification-oz/option/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "verification-solmate/option/lib/forge-std"]
+	path = verification-solmate/option/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/solmate"]
+	path = lib/solmate
+	url = https://github.com/transmissions11/solmate
+[submodule "verification-oz/lib/openzeppelin-contracts"]
+	path = verification-oz/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

@@ -1,0 +1,10 @@
+{
+  "name": "airdrop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.1"
+  }
+}

@@ -1,0 +1,8 @@
+4c4
+< import {MerkleProof} from "@oz/utils/cryptography/MerkleProof.sol";
+---
+> import {MerkleProofLib} from "solmate/utils/MerkleProofLib.sol";
+20c20
+<         bool ok = MerkleProof.verify({proof: proof, root: merkleRoot, leaf: leaf});
+---
+>         bool ok = MerkleProofLib.verify({proof: proof, root: merkleRoot, leaf: leaf});
