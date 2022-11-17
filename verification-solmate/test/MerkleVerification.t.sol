@@ -39,6 +39,8 @@ contract MerkleVerificationTest is Test {
     }
 
     /**
+    // Note that it's required to compute the leaf outside the verification
+    // contract for this attack to work.
     function testSecondPreimageAttack() public {
         bytes32 leaf = bytes32(0xcbc3f67f079aa8035ead7c1f408d40dcd4f7be7f467eb800122f6ac309598b99);
 

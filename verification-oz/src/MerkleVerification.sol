@@ -6,7 +6,7 @@ import {MerkleProof} from "@oz/utils/cryptography/MerkleProof.sol";
 contract MerkleVerification {
     error InvalidProof();
 
-    bytes32 public merkleRoot;
+    bytes32 public immutable merkleRoot;
 
     constructor(bytes32 merkleRoot_) {
         merkleRoot = merkleRoot_;
@@ -23,4 +23,14 @@ contract MerkleVerification {
             revert InvalidProof();
         }
     }
+
+    /**
+    function secondPreimageAttack(bytes32 leaf, bytes32[] calldata proof) external {
+        bool ok = MerkleProof.verify({proof: proof, root: merkleRoot, leaf: leaf});
+
+        if (!ok) {
+            revert InvalidProof();
+        }
+    }
+     */
 }

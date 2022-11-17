@@ -6,7 +6,7 @@ import {MerkleProofLib} from "solmate/utils/MerkleProofLib.sol";
 contract MerkleVerification {
     error InvalidProof();
 
-    bytes32 public merkleRoot;
+    bytes32 public immutable merkleRoot;
 
     constructor(bytes32 merkleRoot_) {
         merkleRoot = merkleRoot_;
@@ -23,4 +23,16 @@ contract MerkleVerification {
             revert InvalidProof();
         }
     }
+
+    /**
+    // Note that it's required to compute the leaf outside the verification
+    // contract for this attack to work.
+    function secondPreimageAttack(bytes32 leaf, bytes32[] calldata proof) external {
+        bool ok = MerkleProofLib.verify({proof: proof, root: merkleRoot, leaf: leaf});
+
+        if (!ok) {
+            revert InvalidProof();
+        }
+    }
+     */
 }
