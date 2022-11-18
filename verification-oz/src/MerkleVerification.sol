@@ -17,14 +17,15 @@ contract MerkleVerification {
         // See https://github.com/OpenZeppelin/merkle-tree#treeleafhash.
         bytes32 leaf = keccak256(bytes.concat(keccak256(abi.encode(msg.sender, amount))));
 
-        bool ok = MerkleProof.verify({proof: proof, root: merkleRoot, leaf: leaf});
+        bool ok = MerkleProof.verify({root: merkleRoot, proof: proof, leaf: leaf});
 
         if (!ok) {
             revert InvalidProof();
         }
     }
 
-    /**
+    // Note that it's required to compute the leaf outside the verification
+    // contract for this attack to work.
     function secondPreimageAttack(bytes32 leaf, bytes32[] calldata proof) external {
         bool ok = MerkleProof.verify({proof: proof, root: merkleRoot, leaf: leaf});
 
@@ -32,5 +33,4 @@ contract MerkleVerification {
             revert InvalidProof();
         }
     }
-     */
 }

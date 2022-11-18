@@ -28,15 +28,15 @@ Build a Merkle Tree of known certificates, i.e. build a **public**, **append-onl
 
 This log can be read by clients to cross-check whether their downloaded certificate is known.
 
-_(Note that after the initial download, the certificate can easily be cached local)_
+The log can be trusted, because everyone can audit (fully or partially) the log.
 
-This log can be read
+_(Note that after the initial download, the certificate can easily be cached local)_
 
 
 ## Golang's [Checksum Database](https://go.dev/ref/mod#checksum-database)
 
 - Go programs can have external dependencies, e.g. code hosted at github.
-- **Q**: How can devs have **verifiable**, **reproducible** build while downloading code from the internet?
+- **Q**: How can devs have **verifiable** **reproducible** build while downloading code from the internet?
 - **A**: Build a Merkle Tree of go packages
 
 "This ensures that unexpected code changes cannot be introduced when first adding a dependency to a module or when upgrading a dependency." _(see [initial proposal](https://go.googlesource.com/proposal/+/master/design/25530-sumdb.md#checksum-database))_

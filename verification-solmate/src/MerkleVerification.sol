@@ -24,7 +24,6 @@ contract MerkleVerification {
         }
     }
 
-    /**
     // Note that it's required to compute the leaf outside the verification
     // contract for this attack to work.
     function secondPreimageAttack(bytes32 leaf, bytes32[] calldata proof) external {
@@ -34,5 +33,4 @@ contract MerkleVerification {
             revert InvalidProof();
         }
     }
-     */
 }

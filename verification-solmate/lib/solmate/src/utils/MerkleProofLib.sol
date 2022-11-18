@@ -14,15 +14,6 @@ library MerkleProofLib {
         assembly {
             if proof.length {
                 // Left shifting by 5 is like multiplying by 32.
-                // @audit Shifting does not have overflow protection.
-                //        However, max array length is type(uint).max
-                //        -> max valid proof length is log2 type(uint).max.
-                //
-                // Wolframalpha: log2 (type(uint).max) ~= 256
-                //               ...Crazy how bits work, right?
-                //
-                // 256 * 32 < type(uint).max
-                // => No overflow danger
                 let end := add(proof.offset, shl(5, proof.length))
 
                 // Initialize offset to the offset of the proof in calldata.

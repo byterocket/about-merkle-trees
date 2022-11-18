@@ -1,6 +1,6 @@
 # Introduction
 
-## Problem Definition 1
+## Problem Definition
 
 [Ralph Merkle](https://en.wikipedia.org/wiki/Ralph_Merkle) had the solve the following problem in his [phd thesis](https://www.ralphmerkle.com/papers/Thesis1979.pdf) from 1979:
 
@@ -52,8 +52,3 @@ _(see [Wikipedia](https://en.wikipedia.org/wiki/Merkle_tree))_
 
 [Prev](./README.md)
 [Next](./1_UseCaseExamples.md)
-
-
-
-Ralph Merkle came up with a _Tree Authentication_ mechanism with which
-`only log2 n transmissions are required` _(see page 51)_
