@@ -2,7 +2,7 @@
 
 This repository was created for **EVM Expeditions #04**, where [merkleplant](https://github.com/pmerkleplant) gave an intro to merkle trees. You can find the video here:
 
-[**👉 Click here for the video 👈**](https://youtube.com)
+[**👉 Click here for the video 👈**](https://www.youtube.com/watch?v=9IsEcKdG-Ls)
 
 # Table of Contents
 1. [Introduction](./0_Introduction.md)
